@@ -1,0 +1,36 @@
+package Examples.Functions
+
+import Examples.Functions.HigherOrderFunctions.any
+
+//сылка на функции. Оператор ::
+/**
+ * Функция 'isOdd' проверяет, является ли число нечетным, возвращая true, если число не делится на 2 без остатка.
+ */
+fun isOdd(a: Int): Boolean{
+    return a % 2  == 1
+}
+
+class A(val a: Int) {
+    /**
+     * функция 'isMyValue' проверяет, равно ли значение 'a' переданному в функцию числу.
+     */
+    fun isMyValue(a: Int) : Boolean = this.a == a
+}
+
+fun main(){
+    var array = intArrayOf(2, 3, 4)
+
+    val arrayHasValueMoreThan2 = array.any { it > 2 }
+
+    val arrayHasOddValue = array.any ( ::isOdd )
+
+    val a = A(3)
+    val arrayHasValueOfA = array.any ( a :: isMyValue )
+
+    println(arrayHasValueMoreThan2)
+    println(arrayHasOddValue)
+    println(arrayHasValueOfA)
+}
+
+
+
