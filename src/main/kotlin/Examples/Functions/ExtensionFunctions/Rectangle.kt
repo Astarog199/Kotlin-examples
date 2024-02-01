@@ -1,4 +1,4 @@
-package Examples.Functions.Ex01_Extension
+package Examples.Functions.ExtensionFunctions
 
 data class Rectangle
     (

@@ -1,6 +1,5 @@
-package Examples.Functions.Ex02_LambdaExpressions
+package Examples.Functions.LambdaExpressions
 
-import Examples.Functions.HigherOrderFunctions.any
 import java.awt.Rectangle
 
 /*

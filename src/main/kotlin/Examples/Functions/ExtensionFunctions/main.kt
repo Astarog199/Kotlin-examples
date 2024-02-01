@@ -1,4 +1,4 @@
-package Examples.Functions.Ex01_Extension
+package Examples.Functions.ExtensionFunctions
 
 fun main() {
     val rectangle=Rectangle(2.0, 3.0)

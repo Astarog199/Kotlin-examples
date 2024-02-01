@@ -1,4 +1,4 @@
-package Examples.Functions.Ex01_Extension
+package Examples.Functions.ExtensionFunctions
 
 // Функция
 fun isSizeValid(rectangle: Rectangle) : Boolean {

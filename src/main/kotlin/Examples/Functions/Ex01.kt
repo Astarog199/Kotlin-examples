@@ -18,18 +18,15 @@ class A(val a: Int) {
 }
 
 fun main(){
-    var array = intArrayOf(2, 3, 4)
-
-    val arrayHasValueMoreThan2 = array.any { it > 2 }
+    val array = intArrayOf(2, 3, 4)
 
     val arrayHasOddValue = array.any ( ::isOdd )
 
     val a = A(3)
     val arrayHasValueOfA = array.any ( a :: isMyValue )
 
-    println(arrayHasValueMoreThan2)
-    println(arrayHasOddValue)
-    println(arrayHasValueOfA)
+    println(arrayHasOddValue) //true
+    println(arrayHasValueOfA) //true
 }
 
 

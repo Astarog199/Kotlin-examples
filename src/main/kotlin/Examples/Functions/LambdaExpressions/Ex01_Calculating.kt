@@ -1,4 +1,4 @@
-package Examples.Functions.Ex02_LambdaExpressions
+package Examples.Functions.LambdaExpressions
 
 val add = {a: Int, b: Int -> a+b}
 val add2 = {a: Int, b: Int ->
