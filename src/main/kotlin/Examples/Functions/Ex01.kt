@@ -1,7 +1,5 @@
 package Examples.Functions
 
-import Examples.Functions.HigherOrderFunctions.any
-
 //сылка на функции. Оператор ::
 /**
  * Функция 'isOdd' проверяет, является ли число нечетным, возвращая true, если число не делится на 2 без остатка.
