@@ -20,8 +20,8 @@ val entries = listOf(
     Entry("Paris", "Charles", 44)
 )
 
-inline fun Iterable<Examples.Collection.map_filter.Entry>.mfilter(action:(Examples.Collection.map_filter.Entry) -> Boolean):List<Examples.Collection.map_filter.Entry>{
-    val filterList = ArrayList<Examples.Collection.map_filter.Entry>()
+inline fun Iterable<Entry>.mfilter(action:(Entry) -> Boolean):List<Entry>{
+    val filterList = ArrayList<Entry>()
     for (i in this){
         if(action(i)){
             filterList.add(i)
@@ -31,7 +31,7 @@ inline fun Iterable<Examples.Collection.map_filter.Entry>.mfilter(action:(Exampl
 }
 
 fun main() {
-    val res = Examples.Collection.map_filter.entries.mfilter { it.name == "Oliver" }
+    val res = entries.mfilter { it.name == "Oliver" }
     for (i in res) {
         println("${i.name} in ${i.city}")
     }

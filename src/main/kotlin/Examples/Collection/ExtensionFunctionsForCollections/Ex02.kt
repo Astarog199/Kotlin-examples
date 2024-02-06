@@ -1,4 +1,4 @@
-package Examples.Collection.map_filter
+package Examples.Collection.ExtensionFunctionsForCollections
 
 data class Entry(
     val city: String,
@@ -33,8 +33,9 @@ val entries = listOf(
 
 fun main() {
    val peopleInLondon = entries
-       .filter{ it.city == "London" }.filter { it.age in 21..30 }
-    println(peopleInLondon.size)
+       .filter{ it.city == "London" }
+       .count { it.age in 21..30 }
+    println(peopleInLondon)
 
   val uniqueNames = entries.asSequence()
       .filter { it.city == "Berlin" }

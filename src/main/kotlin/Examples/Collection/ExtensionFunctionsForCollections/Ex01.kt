@@ -1,4 +1,4 @@
-package Examples.Collection.map_filter
+package Examples.Collection.ExtensionFunctionsForCollections
 
 import kotlin.math.min
 import kotlin.random.Random
