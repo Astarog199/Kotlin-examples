@@ -41,14 +41,12 @@ class SimpleLoggerImpl(
     }
 }
 
-// TODO StackTraceLogger
-
 class StackTraceLogger(logger: SimpleLoggerImpl) :SimpleLogger by logger
 {
     override fun log(message: String){
         super.log(message)
         val stackTrace = Thread.currentThread().stackTrace
-        for (s in stackTrace){
+        for (s in stackTrace.take(3)){
             if (stackTrace.indexOf(s) != 0 ){
             println(s)
             }
@@ -56,9 +54,11 @@ class StackTraceLogger(logger: SimpleLoggerImpl) :SimpleLogger by logger
     }
 }
 
-val stackTraceLogger = StackTraceLogger(
-    SimpleLoggerImpl("MyLogger: ")
-)
+val stackTraceLogger by lazy {
+    StackTraceLogger(
+        SimpleLoggerImpl("MyLogger: ")
+    )
+}
 
 fun main() {
     println("Enter main()")
