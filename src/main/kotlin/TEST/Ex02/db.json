@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Bob",
+    "emails": [
+      "mail@mail.ru",
+      "mail@gmail.com"
+    ],
+    "phones": [
+      "1234",
+      "2345",
+      "3456"
+    ]
+  }
+]
